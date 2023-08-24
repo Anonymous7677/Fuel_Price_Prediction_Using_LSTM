@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css'%}">
+</head>
+
+<body>
+
+    <div class="nav">
+        <p class="nav-title">
+            Malaysia Fuel Price Prediction Using Artificial Neural Network
+        </p>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="box-wrapper">
+        <p class="box-wrapper-header">
+            Prediction for next week :
+        </p>
+        <div class="box-list">
+            <div class="left-column">
+                <p class="box-list-header" style="font-size:30px; font-family:consolas; color:black;">RON 95</p>
+                <div id="box1">
+                    <p style="color:black; font-size:20px;text-align:left;padding:10%;padding-top:20%;">
+                        RM
+                    </p>
+                    <p style="color:black; font-size:75px;text-align:left;padding-left:10%">
+                        {{ r95_1 }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="middle-column">
+                <p class="box-list-header" style="font-size:30px; font-family:consolas; color:black;">RON 97</p>
+                <div id="box2">
+                    <p style="color:black; font-size:20px;text-align:left;padding:10%;padding-top:20%;">
+                        RM
+                    </p>
+                    <p style="color:black; font-size:75px;text-align:left;padding-left:10%">
+                        {{ r97_1 }}</p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <p class="box-list-header" style="font-size:30px; font-family:consolas; color:black;">DIESEL</p>
+                <div id="box3">
+                    <p style="color:black; font-size:20px;text-align:left;padding:10%;padding-top:20%;">
+                        RM
+                    </p>
+                    <p style="color:black; font-size:75px;text-align:left;padding-left:10%">
+                        {{ diesel_1 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="table-title"
+        style="text-align: left; margin-left: 10%; margin-top: 5%; font-size: 20px; font-family: consolas; color: black;">
+        Predictions in the next 3 weeks:
+    </p>
+    <table class="prediction-result" style="padding-bottom:5%;">
+        <thead>
+            <tr style="text-align: center; background-color: black; color: white;">
+                <th>Date</th>
+                <th>RON95/litre</th>
+                <th>RON97/litre</th>
+                <th>Diesel/litre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ date_1 }}</td>
+                <td>{{ r95_1 }}</td>
+                <td>{{ r97_1 }}</td>
+                <td>{{ diesel_1 }}</td>
+            </tr>
+            <tr>
+                <td>{{ date_2 }}</td>
+                <td>{{ r95_2 }}</td>
+                <td>{{ r97_2 }}</td>
+                <td>{{ diesel_2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ date_3 }}</td>
+                <td>{{ r95_3 }}</td>
+                <td>{{ r97_3 }}</td>
+                <td>{{ diesel_3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+<footer>
+    <nav class="footer-content">
+        <p style="font-size:20px;"><a href="/model/home/"> Home</a> | <a href="/model/history/">History</a></p>
+    </nav>
+</footer>
+
+</html>
